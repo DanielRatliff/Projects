@@ -13,6 +13,7 @@ public class Main {
 		input = in.nextLine().split(" ");
 		while(!input[0].equals("QUIT")) {
 			printRoom(player);
+			System.out.println();
 			System.out.println("Enter your command:");
 			parse(collectInput(),player);
 		}
@@ -39,8 +40,9 @@ public class Main {
 		switch (command[0].toUpperCase()) {
 		case "GO":
 			if (player.getCurrentRoom().getExit(command[1]) == null) {
-				System.out.println(
-						"Im Sorry, The Room you are currently in does not have an exit in that direction. Please try typing your command again or type HELP for a list of commands and instructions.");
+				System.out.println("Im Sorry, The Room you are currently in does not have an exit in that direction. Please try typing your command again or type HELP for a list of commands"
+						+ " and instructions.");
+				System.out.println();
 				parse(collectInput(), player);
 				break;
 			}

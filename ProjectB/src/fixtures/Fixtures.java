@@ -1,6 +1,6 @@
 package fixtures;
 
-public class Fixtures {
+public abstract class Fixtures {
 	private String name;
 	private String shortDescription;
 	private String longDescription;
