@@ -1,5 +1,5 @@
 package fixtures;
-
+//Abstract class to aid in the construction of the Room object
 public abstract class Fixtures {
 	private String name;
 	private String shortDescription;

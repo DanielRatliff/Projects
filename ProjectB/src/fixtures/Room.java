@@ -1,11 +1,12 @@
 /**
  * 
  * @author Daniel Ratliff
+ * This class creates the room Object from the Fixtures Abstract Class.
+ * It inherits the necessary getters and setters as well as the Field Variables.
  *
  */
 package fixtures;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 public class Room extends Fixtures {
 	private Map<String,Room> exits = new HashMap<String,Room>();

@@ -1,7 +1,4 @@
 package game;
-
-import java.util.List;
-
 import fixtures.Room;
 
 public class RoomManager {
@@ -9,7 +6,7 @@ public class RoomManager {
 	Room[] rooms = new Room[10];
 //	List<String> directions;
 //	List<Room> exits;
-	public void init() {
+	private void init() {
 		Room livingRoom = new Room("Living Room","Luxorious Leisure","A spacious living area with furniture that beckons one  to come and lounge for a while. \n"
 				+ "The blue and green coloring throughout the room give one feeling of a calmness and refreshment. \n"
 				+ "On the east wall next to the stairs is door to a restroom. To the north there is a hallway leading to the kitchen and east to the dining room");
@@ -59,5 +56,9 @@ public class RoomManager {
 		masterBedroom.addExits("south", masterBathroom,"west", study);
 		masterBathroom.addExit("north", masterBedroom);
 		guestBedroom.addExit("north", study);
+	}
+	public RoomManager() {
+		super();
+		this.init();
 	}
 }

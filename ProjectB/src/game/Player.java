@@ -1,7 +1,7 @@
 package game;
 
 import fixtures.Room;
-
+//Class used to keep track of the current room for game purposes
 public class Player {
 	Room currentRoom;
 	
