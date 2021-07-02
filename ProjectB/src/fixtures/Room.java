@@ -12,7 +12,10 @@ public class Room extends Fixtures {
 	private Map<String,Room> exits = new HashMap<String,Room>();
 	//NORTH, SOUTH, EAST, WEST, UP, DOWN
 	public Room(String name, String shortDescription,String longDescription) {
-		super(name, shortDescription, longDescription);
+		super();
+		setName(name);
+		setShortDescription(shortDescription);
+		setLongDescription(longDescription);
 	}
 	public void addExit(String direction,Room exit) {
 		exits.put(direction.toUpperCase(), exit);
@@ -36,5 +39,22 @@ public class Room extends Fixtures {
 			return exits.get(direction.toUpperCase());
 		return null;	
 	}
+	@Override
+	public void setName(String name) {
+		// TODO Auto-generated method stub
+		this.name = name;
+	}
+	@Override
+	public void setShortDescription(String shortDescription) {
+		// TODO Auto-generated method stub
+		this.shortDescription = shortDescription;
+	}
+	@Override
+	public void setLongDescription(String longDescription) {
+		// TODO Auto-generated method stub
+		this.longDescription = longDescription;
+	}
+	
+	
 	
 }

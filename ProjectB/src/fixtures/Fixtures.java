@@ -1,9 +1,9 @@
 package fixtures;
 //Abstract class to aid in the construction of the Room object
 public abstract class Fixtures {
-	private String name;
-	private String shortDescription;
-	private String longDescription;
+	protected String name;
+	protected String shortDescription;
+	protected String longDescription;
 	
 	public Fixtures(String name, String shortDescription, String longDescription) {
 		super();
@@ -11,23 +11,21 @@ public abstract class Fixtures {
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
+	public Fixtures() {
+		super();
+	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	public abstract void setName(String name);
+	
 	public String getShortDescription() {
 		return shortDescription;
 	}
-	public void setShortDescription(String shortDescription) {
-		this.shortDescription = shortDescription;
-	}
+	public abstract void setShortDescription(String shortDescription);
+	
 	public String getLongDescription() {
 		return longDescription;
 	}
-	public void setLongDescription(String longDescription) {
-		this.longDescription = longDescription;
-	}
-	
+	public abstract void setLongDescription(String longDescription);
 }
